@@ -1,0 +1,106 @@
+body {
+  padding: 100px;
+  font-family: sans-serif;
+}
+
+.bank-title {
+  text-align: center;
+}
+
+#submit-area h4 {
+  margin: 0;
+}
+
+#submit-area {
+  box-shadow: 5px 5px 10px gray;
+  border-radius: 5px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.primary-btn {
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: green;
+}
+
+#submit-area input {
+  padding: .5rem;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+#submit-area input:focus{
+  outline: 4px solid rgba(30, 143, 255, 0.712);
+}
+
+.small-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.small-card:nth-of-type(1) {
+  background: rgb(139, 17, 221);
+}
+.small-card:nth-of-type(2) {
+  background: #EE946E;
+}
+.small-card:nth-of-type(3) {
+  background: #EA9B0D;
+}
+
+.small-card {
+  width: 200px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.small-card h1 {
+  margin: 15px 0;
+}
+.small-card h4 {
+  margin: 5px 0;
+}
+
+.large-card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: space-around;
+}
+
+.large-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  box-shadow: 5px 5px 15px gray;
+  border-radius: 5px;
+  width: 400px;
+}
+
+.large-card input {
+  outline: none;
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  border-right: none;
+  border-left: none;
+}

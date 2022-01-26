@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pioneer Bank</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="login-area">
+      <h1 class="bank-title">Welcome to Pioneer Bank</h1>
+
+      <div id="submit-area">
+        <h4>Login</h4>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="password" />
+        <button id="login-btn" class='primary-btn'>Enter</button>
+      </div>
+    </div>
+
+    <div id="transaction-area">
+      <div class='small-card-container'>
+        <div class="small-card">
+          <h4>Deposit</h4>
+          <h1>$ <span id="current-deposit">00</span></h1>
+        </div>
+        <div class="small-card">
+          <h4>Withdraw</h4>
+          <h1>$ <span id="current-withdraw">00</span></h1>
+        </div>
+        <div class="small-card">
+          <h4>Balance</h4>
+          <h1>$ <span id="current-balance">1240</span></h1>
+        </div>
+      </div>
+
+      <div class="large-card-container">
+        <div class="large-card">
+          <h2>Deposit</h2>
+          <input id='deposit-amount' type="number" placeholder='$ amount you want to deposit.'>
+          <button id='deposit' class='primary-btn' >Deposit</button>
+        </div>
+
+        <div class="large-card">
+          <h2>Withdraw</h2>
+          <input id='withdraw-amount' type="number" placeholder='$ amount you want to withdraw.'>
+          <button id='withdraw' class='primary-btn'>Withdraw</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
