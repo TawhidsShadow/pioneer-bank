@@ -17,34 +17,42 @@ loginBtn.addEventListener('click', function () {
 });
 
 deposit.addEventListener('click', function () {
-  const depositNumber = parseFloat(depositAmount.value);
-  const currentDepositNumber = parseFloat(currentDeposit.innerText);
-  const totalDeposit = depositNumber + currentDepositNumber;
+  if (depositAmount.value < 1) {
+    alert('Deposit can"t be less than 1');
+  } else {
+    const depositNumber = parseFloat(depositAmount.value);
+    const currentDepositNumber = parseFloat(currentDeposit.innerText);
+    const totalDeposit = depositNumber + currentDepositNumber;
 
-  currentDeposit.innerText = totalDeposit;
-  depositAmount.value = null;
+    currentDeposit.innerText = totalDeposit;
+    depositAmount.value = null;
 
-  const currentBalanceNumber = parseFloat(currentBalance.innerText);
-  const totalBalance = depositNumber + currentBalanceNumber;
+    const currentBalanceNumber = parseFloat(currentBalance.innerText);
+    const totalBalance = depositNumber + currentBalanceNumber;
 
-  currentBalance.innerText = totalBalance;
+    currentBalance.innerText = totalBalance;
+  }
 });
 
 withdraw.addEventListener('click', function () {
-  const withdrawNumber = parseFloat(withdrawAmount.value);
-  const currentWithdrawNumber = parseFloat(currentWithdraw.innerText);
-  const currentBalanceNumber = parseFloat(currentBalance.innerText);
-
-  if (withdrawNumber <= currentBalanceNumber) {
-    const totalWithdraw = withdrawNumber + currentWithdrawNumber;
-
-    currentWithdraw.innerText = totalWithdraw;
-    withdrawAmount.value = null;
-
-    const totalBalance = currentBalanceNumber - withdrawNumber;
-
-    currentBalance.innerText = totalBalance;
+  if (withdrawAmount.value < 1) {
+    alert('Withdraw can"t be less than 1');
   } else {
-    alert('insufficient balance!');
+    const withdrawNumber = parseFloat(withdrawAmount.value);
+    const currentWithdrawNumber = parseFloat(currentWithdraw.innerText);
+    const currentBalanceNumber = parseFloat(currentBalance.innerText);
+
+    if (withdrawNumber <= currentBalanceNumber) {
+      const totalWithdraw = withdrawNumber + currentWithdrawNumber;
+
+      currentWithdraw.innerText = totalWithdraw;
+      withdrawAmount.value = null;
+
+      const totalBalance = currentBalanceNumber - withdrawNumber;
+
+      currentBalance.innerText = totalBalance;
+    } else {
+      alert('insufficient balance!');
+    }
   }
 });
